@@ -19,6 +19,11 @@ clock = pygame.time.Clock()
 screen.fill((30, 0, 0))
 
 
+def init():
+  for i in range(height//100):
+    for j in range(width//410):
+      plat = Platforms((random.randint(5, (width - 50) // 10)* 10, 120 * i), 'images/grassHalf.png', 70, 40)
+      platform.add(plat)
 
 
 def init():
