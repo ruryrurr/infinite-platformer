@@ -1,6 +1,7 @@
 import pygame
-from pygame.locals import*
 import sys
+from pygame.locals import*
+
 pygame.init()
 screen_info = pygame.display.Info()
 
@@ -12,6 +13,10 @@ screen = pygame.display.set_mode(size)
 clock = pygame.time.Clock()
 
 screen.fill((30, 0, 0))
+
+sprite_list = pygame.sprite.Group()
+platform = pygame.sprite.Group()
+
 
 def main():
   while True:
@@ -28,6 +33,8 @@ def main():
 
           
     screen.fill((30, 0, 30))
+    platform.draw(screen)
+    sprite_list.draw(screen)
     pygame.display.flip()
 
 
